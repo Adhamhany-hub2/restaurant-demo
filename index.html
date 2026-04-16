@@ -16,7 +16,6 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
-    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#buffet">Buffet</a></li>
     <li><a href="#contact">Hours & Location</a></li>
   </ul>
@@ -26,17 +25,7 @@
 <!-- ─── HERO ─── -->
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-ring"></div>
-  <div class="hero-ring"></div>
-  <div class="hero-ring"></div>
-
-  <div class="spice-dot" style="top:20%;left:15%"></div>
-  <div class="spice-dot" style="top:70%;left:8%"></div>
-  <div class="spice-dot" style="top:35%;right:12%"></div>
-  <div class="spice-dot" style="top:80%;right:20%"></div>
-  <div class="spice-dot" style="top:55%;left:25%"></div>
-  <div class="spice-dot" style="top:15%;right:30%"></div>
-
+  
   <div class="hero-content">
     <p class="hero-subtitle">Dryden, Ontario</p>
     <h1 class="hero-title">MASALA<br><span>RESTAURANT</span></h1>
@@ -48,10 +37,6 @@
     </div>
   </div>
 
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
 </section>
 
 <!-- ─── ABOUT ─── -->
@@ -85,15 +70,15 @@
       </div>
       <div class="about-image-grid">
         <img class="about-img"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          src="image/dish2.jpg"
           style="background:linear-gradient(135deg,#C45C1A 0%,#8B1A1A 50%,#1C0A00 100%);min-height:220px;"
           alt="Masala Restaurant Interior">
         <img class="about-img"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          src="image/dish3.jpg"
           style="background:linear-gradient(135deg,#8B3A00 0%,#C45C1A 100%);min-height:160px;"
           alt="Indian Curry Dish">
         <img class="about-img"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          src="image/dish1.jpg"
           style="background:linear-gradient(135deg,#D4A017 0%,#8B1A1A 100%);min-height:160px;"
           alt="Dal Tadka">
       </div>
@@ -101,38 +86,7 @@
   </div>
 </section>
 
-<!-- ─── CUISINES OVERVIEW ─── -->
-<section id="cuisines">
-  <div class="container">
-    <div style="text-align:center">
-      <p class="section-label">What We Offer</p>
-      <h2 class="section-title">Four Cuisines, One Destination</h2>
-      <div class="gold-rule" style="margin:1.5rem auto"></div>
-    </div>
-    <div class="cuisine-cards">
-      <div class="cuisine-card">
-        <div class="cuisine-icon">🪔</div>
-        <div class="cuisine-card-name">East Indian</div>
-        <div class="cuisine-card-desc">Butter chicken, samosas, pakoras, paneer dishes, and freshly baked naan from our tandoor oven.</div>
-      </div>
-      <div class="cuisine-card">
-        <div class="cuisine-icon">🫒</div>
-        <div class="cuisine-card-name">Greek</div>
-        <div class="cuisine-card-desc">Spanakopita, souvlaki, calamari, falafel, and fresh gyros with tzatziki and hummus.</div>
-      </div>
-      <div class="cuisine-card">
-        <div class="cuisine-icon">🌶️</div>
-        <div class="cuisine-card-name">Thai</div>
-        <div class="cuisine-card-desc">Pad Thai, red curries, mango chicken, satay, pork ribs, and springrolls with Thai dips.</div>
-      </div>
-      <div class="cuisine-card">
-        <div class="cuisine-icon">🍔</div>
-        <div class="cuisine-card-name">North American</div>
-        <div class="cuisine-card-desc">Fish &amp; chips, poutine, pizza, pasta, chicken dinners, and classic comfort food favourites.</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ─── MENU ─── -->
 <section id="menu">
@@ -142,12 +96,27 @@
     <div class="gold-rule"></div>
     <p style="color:var(--muted);margin-bottom:3rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;">Select a cuisine to explore our dishes</p>
 
-    <div class="cuisine-nav">
-      <button class="cuisine-btn active" onclick="showTab('indian')">East Indian</button>
-      <button class="cuisine-btn" onclick="showTab('greek')">Greek</button>
-      <button class="cuisine-btn" onclick="showTab('thai')">Thai</button>
-      <button class="cuisine-btn" onclick="showTab('american')">North American</button>
-      <button class="cuisine-btn" onclick="showTab('sides')">Sides &amp; Extras</button>
+    <div class="cuisine-pills">
+      <button class="cuisine-pill active" onclick="showTab('indian')">
+        <span class="pill-icon">🪔</span>
+        <span class="pill-label">East Indian</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('greek')">
+        <span class="pill-icon">🍝</span>
+        <span class="pill-label">Greek</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('thai')">
+        <span class="pill-icon">🌶️</span>
+        <span class="pill-label">Thai</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('american')">
+        <span class="pill-icon">🍔</span>
+        <span class="pill-label">N. American</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('sides')">
+        <span class="pill-icon">🍞</span>
+        <span class="pill-label">Sides</span>
+      </button>
     </div>
 
     <!-- EAST INDIAN -->
@@ -260,44 +229,6 @@
   </div>
 </section>
 
-<!-- ─── GALLERY ─── -->
-<section id="gallery">
-  <div class="container">
-    <div class="gallery-intro">
-      <p class="section-label">Food Gallery</p>
-      <h2 class="section-title">A Feast for the Eyes</h2>
-      <div class="gold-rule"></div>
-      <p style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;">Every dish crafted with care and served with love</p>
-    </div>
-    <div class="masonry">
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#C45C1A,#8B1A1A,#1C0A00);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🍛</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Butter Chicken &amp; Rice</span></div>
-      </div>
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#D4A017,#8B3A00);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🥘</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Dal Tadka</span></div>
-      </div>
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#2D5A27,#8B3A00);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🥦</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Vegetable Curry</span></div>
-      </div>
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#8B3A00,#C45C1A);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🌯</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Spring Rolls &amp; Biryani</span></div>
-      </div>
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:3/2;background:linear-gradient(135deg,#C45C1A,#1C0A00);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🏠</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Our Dining Room</span></div>
-      </div>
-      <div class="masonry-item">
-        <div style="width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#D4A017,#2D5A27);display:flex;align-items:center;justify-content:center;"><span style="font-size:4rem">🍲</span></div>
-        <div class="masonry-overlay"><span class="masonry-label">Freshly Made Daily</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ─── BUFFET ─── -->
 <section id="buffet">
   <div class="container buffet-content">
@@ -329,71 +260,60 @@
 
 <!-- ─── CONTACT ─── -->
 <section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div>
-        <p class="section-label">Find Us</p>
-        <h2 class="section-title">Visit Masala Restaurant</h2>
-        <div class="gold-rule"></div>
-        <div class="contact-info-items">
-          <div class="contact-info-item">
+  <div class="contact-layout">
+
+    <!-- LEFT: Restaurant image -->
+    <div class="contact-image-side">
+      <img src="image/dish4.jpg" alt="Masala Restaurant" class="contact-img">
+      <div class="contact-img-overlay">
+        <div class="contact-img-badge">
+          <span class="contact-img-badge-top">Since</span>
+          <span class="contact-img-badge-year">2014</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Info -->
+    <div class="contact-info-side">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Visit Masala<br>Restaurant</h2>
+      <div class="gold-rule"></div>
+      <p class="contact-tagline">We'd love to have you. Come in, sit down, and let the flavours take over.</p>
+
+      <div class="contact-info-items">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
             <div class="contact-info-label">Location</div>
-            <div class="contact-info-value">Dryden, Ontario</div>
+            <div class="contact-info-value">Dryden, Ontario, Canada</div>
           </div>
-          <div class="contact-info-item">
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕛</div>
+          <div>
             <div class="contact-info-label">Lunch Hours</div>
             <div class="contact-info-value">11:30 AM – 1:45 PM<br><span style="font-size:0.9rem;color:var(--muted)">Lunch Buffet served daily</span></div>
           </div>
-          <div class="contact-info-item">
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🌙</div>
+          <div>
             <div class="contact-info-label">Dinner Hours</div>
             <div class="contact-info-value">2:00 PM – Close<br><span style="font-size:0.9rem;color:var(--muted)">Full buffet &amp; à la carte</span></div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-label">Cuisines</div>
-            <div class="contact-info-value" style="font-size:1rem">East Indian · Greek · Thai · North American</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value">+1 807-223-8622</div>
           </div>
         </div>
       </div>
-      <!-- <div>
-        <p style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;margin-bottom:2rem;">Reserve a table or send us a message</p>
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">First Name</label>
-              <input type="text" class="form-input" placeholder="Ahmed">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" placeholder="Hassan">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="you@example.com">
-          </div>
-          <div class="form-row"> 
-            <div class="form-group"> 
-              <label class="form-label">Date</label>
-              <input type="date" class="form-input">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Party Size</label>
-              <select class="form-select">
-                <option>1–2 Guests</option>
-                <option>3–4 Guests</option>
-                <option>5–6 Guests</option>
-                <option>7+ Guests</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message (Optional)</label>
-            <textarea class="form-textarea" placeholder="Any special requests or dietary requirements..."></textarea>
-          </div>
-          <button class="form-submit">Reserve My Table</button>
-        </div>
-      </div> -->
+
+      <a href="tel:+18072238622" class="contact-cta">Call to Reserve</a>
     </div>
+
   </div>
 </section>
 

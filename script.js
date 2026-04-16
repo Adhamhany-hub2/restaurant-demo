@@ -1,12 +1,14 @@
 /* ─── MENU TAB SWITCHING ─── */
 function showTab(name) {
-  // Hide all panels and deactivate all buttons
   document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.cuisine-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.cuisine-pill').forEach(b => b.classList.remove('active'));
 
-  // Show selected panel and activate clicked button
   document.getElementById('tab-' + name).classList.add('active');
-  event.target.classList.add('active');
+
+  // Handle clicks on child spans inside the button
+  let btn = event.target;
+  if (!btn.classList.contains('cuisine-pill')) btn = btn.closest('.cuisine-pill');
+  if (btn) btn.classList.add('active');
 }
 
 /* ─── SCROLL-REVEAL ANIMATION ─── */
@@ -19,8 +21,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-// Apply initial hidden state and observe each element
-document.querySelectorAll('.menu-item, .buffet-card, .cuisine-card, .stat').forEach(el => {
+document.querySelectorAll('.menu-item, .buffet-card, .cuisine-card, .stat, .contact-info-item').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s, transform 0.5s';
