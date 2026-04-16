@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masala Restaurant | Dryden, Ontario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a href="#hero" class="nav-logo">MASALA</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#buffet">Buffet</a></li>
+    <li><a href="#contact">Hours & Location</a></li>
+  </ul>
+  <a href="#contact" class="nav-reserve">Reserve a Table</a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  
+  <div class="hero-content">
+    <p class="hero-subtitle">Dryden, Ontario</p>
+    <h1 class="hero-title">MASALA<br><span>RESTAURANT</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">East Indian · Greek · Thai · North American Cuisine</p>
+    <div class="hero-cta-group">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#buffet" class="btn-outline">Daily Buffet</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">A World of Flavours<br>Under One Roof</h2>
+        <div class="gold-rule"></div>
+        <p>At Masala Restaurant, we believe great food transcends borders. Our kitchen brings together the rich aromatic spices of East India, the fresh bold flavours of Greece, the vibrant heat of Thailand, and the comforting classics of North America.</p>
+        <p>Located in the heart of Ontario, we've built a welcoming space where families, friends, and food lovers can gather and share something truly extraordinary — a meal made with passion.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">World Cuisines</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">60+</div>
+            <div class="stat-label">Menu Items</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Daily</div>
+            <div class="stat-label">Buffet Service</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Made Fresh</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-grid">
+        <img class="about-img"
+          src="image/dish2.jpg"
+          style="background:linear-gradient(135deg,#C45C1A 0%,#8B1A1A 50%,#1C0A00 100%);min-height:220px;"
+          alt="Masala Restaurant Interior">
+        <img class="about-img"
+          src="image/dish3.jpg"
+          style="background:linear-gradient(135deg,#8B3A00 0%,#C45C1A 100%);min-height:160px;"
+          alt="Indian Curry Dish">
+        <img class="about-img"
+          src="image/dish1.jpg"
+          style="background:linear-gradient(135deg,#D4A017 0%,#8B1A1A 100%);min-height:160px;"
+          alt="Dal Tadka">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ─── MENU ─── -->
+<section id="menu">
+  <div class="container">
+    <p class="section-label">Explore</p>
+    <h2 class="section-title">Our Full Menu</h2>
+    <div class="gold-rule"></div>
+    <p style="color:var(--muted);margin-bottom:3rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;">Select a cuisine to explore our dishes</p>
+
+    <div class="cuisine-pills">
+      <button class="cuisine-pill active" onclick="showTab('indian')">
+        <span class="pill-icon">🪔</span>
+        <span class="pill-label">East Indian</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('greek')">
+        <span class="pill-icon">🍝</span>
+        <span class="pill-label">Greek</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('thai')">
+        <span class="pill-icon">🌶️</span>
+        <span class="pill-label">Thai</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('american')">
+        <span class="pill-icon">🍔</span>
+        <span class="pill-label">N. American</span>
+      </button>
+      <button class="cuisine-pill" onclick="showTab('sides')">
+        <span class="pill-icon">🍞</span>
+        <span class="pill-label">Sides</span>
+      </button>
+    </div>
+
+    <!-- EAST INDIAN -->
+    <div class="menu-panel active" id="tab-indian">
+      <div class="menu-grid">
+        <div class="menu-section-header">Appetizers</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Vegetable, Cheese, or Chicken Samosas (×6)</span><span class="menu-item-price">$4.95</span></div><div class="menu-item-desc">Crispy fried pastries, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Spinach Paneer, Chili or Pizza Samosas (×6)</span><span class="menu-item-price">$6.95</span></div><div class="menu-item-desc">Crispy fried pastries, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Bread Pakora (×4)</span><span class="menu-item-price">$7.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Vegetable or Chicken Pakora (×6)</span><span class="menu-item-price">$6.95</span></div><div class="menu-item-desc">Fried chick-pea flour fritters, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Patra</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Lightly spiced chick-peas wrapped in an Arvi leaf.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Aloo Tikki (×2)</span><span class="menu-item-price">$5.95</span></div><div class="menu-item-desc">Potato and cheese cutlets, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Paneer Pakora or Paneer Poppers (×5)</span><span class="menu-item-price">$8.95</span></div><div class="menu-item-desc">East-Indian cheese, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Vegetable Cutlets (×2)</span><span class="menu-item-price">$6.95</span></div><div class="menu-item-desc">Vegetable patties, served with your choice of dip.</div></div>
+        <div class="menu-section-header">Entrées</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Butter Chicken, Rice, and Naan</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Tender marinated chicken breast in our signature sauce. Served with rice and naan bread.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Butter Chicken Meal</span><span class="menu-item-price">$17.95</span></div><div class="menu-item-desc">Butter chicken in signature sauce, served with rice, naan bread, and 6 vegetable samosas with dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Dish Of The Day</span><span class="menu-item-price">$18.95</span></div><div class="menu-item-desc">Your choice of any buffet dish. Served with rice, naan bread, and 6 vegetable samosas with dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tandoori Vegetable Burger</span><span class="menu-item-price">$12.95</span></div><div class="menu-item-desc">Served on a naan bread with mango chutney. With your choice of salad or fries.</div></div>
+      </div>
+    </div>
+
+    <!-- GREEK -->
+    <div class="menu-panel" id="tab-greek">
+      <div class="menu-grid">
+        <div class="menu-section-header">Greek Entrées</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Spanakopita Swirl or Bites</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Spinach and feta cheese filled phyllo pastry, with a Greek salad, and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tyropita Swirl or Bites</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Ricotta and feta cheese filled phyllo pastry, with a Greek salad, and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Souvlaki</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Tender pieces of marinated chicken skewered, with a Greek salad and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Shrimp Souvlaki</span><span class="menu-item-price">$19.95</span></div><div class="menu-item-desc">Deep-fried shrimp skewered, with a Greek salad and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Gyro</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Tender chicken breast slices in a pita, with a Greek salad and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Calamari</span><span class="menu-item-price">$16.95</span></div><div class="menu-item-desc">Served with a Greek salad and your choice of tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Falafel</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Lentils rolled in a chick-pea batter, with a Greek salad and tzatziki or hummus.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Full Greek Salad</span><span class="menu-item-price">$9.50</span></div></div>
+        <div class="menu-section-header">Platters</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Meat Platter</span><span class="menu-item-price">$20.95</span></div><div class="menu-item-desc">Chicken Samosas, Chicken Pakoras, Chicken Springrolls, Chicken Souvlaki, and Ribs.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Vegetable Platter</span><span class="menu-item-price">$18.95</span></div><div class="menu-item-desc">Vegetable Samosas, Cheese Samosas, Spinach &amp; Cheese Samosas, Chili Paneer Samosas, Vegetable Pakoras, Vegetable Springrolls, Spanakopita Bites, and Tyropita Bites.</div></div>
+      </div>
+    </div>
+
+    <!-- THAI -->
+    <div class="menu-panel" id="tab-thai">
+      <div class="menu-grid">
+        <div class="menu-section-header">Thai Starters</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Vegetable Springrolls (×6)</span><span class="menu-item-price">$5.95</span></div><div class="menu-item-desc">Served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Springrolls (×4)</span><span class="menu-item-price">$5.95</span></div><div class="menu-item-desc">Served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken &amp; Pork Dumplings (×8)</span><span class="menu-item-price">$8.95</span></div><div class="menu-item-desc">Steamed, with mild or sweet chili Thai dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken, Cheese &amp; Jalapeño Fritters (×6)</span><span class="menu-item-price">$8.95</span></div><div class="menu-item-desc">Served with your choice of Thai dip.</div></div>
+        <div class="menu-section-header">Thai Entrées — All served over rice or rice noodles with a vegetable medley. Choose mild, medium, or hot.</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Pad Thai</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Thai Red Chicken Curry</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Thai Red Shrimp Curry</span><span class="menu-item-price">$18.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Satay</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Panang Ginger</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Sweet Potato &amp; Chicken Curry</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mango Chicken</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Thai Pork Ribs</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Thai Meatballs</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tofu and Pineapple Curry</span><span class="menu-item-price">$14.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Coconut Rice</span><span class="menu-item-price">$9.95</span></div></div>
+      </div>
+    </div>
+
+    <!-- NORTH AMERICAN -->
+    <div class="menu-panel" id="tab-american">
+      <div class="menu-grid">
+        <div class="menu-section-header">North American Entrées</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">British Style Fish and Chips</span><span class="menu-item-price">$18.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Lobster Ravioli</span><span class="menu-item-price">$21.95</span></div><div class="menu-item-desc">With marinara or butter chicken sauce, and garlic naan bread.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Pasta Marinara</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Gluten free pasta available.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Alfredo</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Gluten free pasta available.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Fish Burger</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Baked fillet of tilapia served on naan bread, with salad or fries.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Breaded Shrimp</span><span class="menu-item-price">$20.95</span></div><div class="menu-item-desc">Lemon-pepper or coconut. With rice or salad.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Dinner</span><span class="menu-item-price">$11.95</span></div><div class="menu-item-desc">Three pieces of fried chicken, served with french fries.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Strips and Fries</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Substitute fries for salad +$3. Gluten free chicken +$3.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Burger and Fries</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Substitute fries for salad, additional $3.00.</div></div>
+        <div class="menu-section-header">Pizza</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Large Pizza</span><span class="menu-item-price">$19.95</span></div><div class="menu-item-desc">Toppings: pepperoni, butter chicken, chicken, buffalo chicken, onions, olives, tomatoes.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Medium Pizza</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Toppings: pepperoni, butter chicken, chicken, buffalo chicken, onions, olives, tomatoes, mushrooms.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Butter Chicken Pizza</span><span class="menu-item-price">$8.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese and Pepperoni Pizza</span><span class="menu-item-price">$8.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese Pizza</span><span class="menu-item-price">$7.95</span></div></div>
+        <div class="menu-section-header">Canadian Favourites</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Butter Chicken Poutine or Meatball Poutine</span><span class="menu-item-price">$12.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Poutine</span><span class="menu-item-price">$8.50</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese and Potato Perogies</span><span class="menu-item-price">$6.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Full Salad</span><span class="menu-item-price">$8.95</span></div><div class="menu-item-desc">Caesar, Italian, or Tossed. Grilled chicken +$3.</div></div>
+      </div>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-panel" id="tab-sides">
+      <div class="menu-grid">
+        <div class="menu-section-header">Sides</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tandoori Garlic Naan Bread</span><span class="menu-item-price">$3.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tandoori Naan Bread</span><span class="menu-item-price">$3.25</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Dhebra</span><span class="menu-item-price">$3.50</span></div><div class="menu-item-desc">East Indian flatbread made with millet flour.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Side Salad</span><span class="menu-item-price">$6.95</span></div><div class="menu-item-desc">Choose from Greek, Caesar, Italian, or Tossed.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Rice</span><span class="menu-item-price">$3.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">French Fries</span><span class="menu-item-price">$4.95</span></div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Sweet Potato Fries</span><span class="menu-item-price">$6.95</span></div></div>
+        <div class="menu-section-header">General Appetizers</div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Calamari</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Batter coated squid, deep-fried, served with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Wings</span><span class="menu-item-price">$11.95</span></div><div class="menu-item-desc">Breaded deep-fried wings. Choose from: Lemon-Pepper, Salt &amp; Pepper, Thai, Buffalo, Sweet &amp; Sour, or Garlic Cilantro.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Pork Riblets</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Boneless, breaded, garlic pork bites with your choice of dip.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Bone-In Pork Bites</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Choose from: Salt &amp; Pepper, Lemon-Pepper or Thai.</div></div>
+        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese Ravioli</span><span class="menu-item-price">$9.95</span></div><div class="menu-item-desc">Deep fried breaded ravioli, served with marinara.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BUFFET ─── -->
+<section id="buffet">
+  <div class="container buffet-content">
+    <p class="section-label" style="text-align:center">Daily Dining Experience</p>
+    <h2 class="section-title" style="text-align:center">The Masala Buffet</h2>
+    <div class="gold-rule" style="margin:1.5rem auto"></div>
+    <p style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;text-align:center;max-width:600px;margin:0 auto;">
+      An all-you-can-enjoy spread of our finest East Indian, Greek, Thai and Canadian dishes — freshly replenished throughout the day.
+    </p>
+    <div class="buffet-cards">
+      <div class="buffet-card">
+        <div class="buffet-card-type">Afternoon &amp; Evening</div>
+        <div class="buffet-card-name">Masala Buffet</div>
+        <div class="buffet-card-price">$20.95</div>
+        <div class="buffet-card-detail">Served from 2:00 PM to close. An extensive selection of our buffet favourites across all four cuisines.</div>
+      </div>
+      <div class="buffet-card" style="border-color:rgba(232,133,10,0.4)">
+        <div class="buffet-card-type">Midday</div>
+        <div class="buffet-card-name">Lunch Buffet</div>
+        <div class="buffet-card-price">$12.95</div>
+        <div class="buffet-card-detail">Served from 11:30 AM to 1:45 PM. A lighter selection of buffet classics — perfect for a weekday escape.</div>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:0.75rem;text-align:center;margin-top:2rem;letter-spacing:0.1em;">
+      * Buffet selection may vary daily. All items freshly prepared in-house.
+    </p>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-layout">
+
+    <!-- LEFT: Restaurant image -->
+    <div class="contact-image-side">
+      <img src="image/dish4.jpg" alt="Masala Restaurant" class="contact-img">
+      <div class="contact-img-overlay">
+        <div class="contact-img-badge">
+          <span class="contact-img-badge-top">Since</span>
+          <span class="contact-img-badge-year">2014</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Info -->
+    <div class="contact-info-side">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Visit Masala<br>Restaurant</h2>
+      <div class="gold-rule"></div>
+      <p class="contact-tagline">We'd love to have you. Come in, sit down, and let the flavours take over.</p>
+
+      <div class="contact-info-items">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Dryden, Ontario, Canada</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕛</div>
+          <div>
+            <div class="contact-info-label">Lunch Hours</div>
+            <div class="contact-info-value">11:30 AM – 1:45 PM<br><span style="font-size:0.9rem;color:var(--muted)">Lunch Buffet served daily</span></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🌙</div>
+          <div>
+            <div class="contact-info-label">Dinner Hours</div>
+            <div class="contact-info-value">2:00 PM – Close<br><span style="font-size:0.9rem;color:var(--muted)">Full buffet &amp; à la carte</span></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value">+1 807-223-8622</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="tel:+18072238622" class="contact-cta">Call to Reserve</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">MASALA RESTAURANT</div>
+    <div class="footer-copy">© 2025 Masala Restaurant · Ontario, Canada · East Indian, Greek, Thai &amp; North American Cuisine</div>
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#buffet">Buffet</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript loaded at the end so the DOM is ready -->
+<script src="script.js"></script>
+</body>
+</html>
