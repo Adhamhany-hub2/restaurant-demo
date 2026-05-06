@@ -574,3 +574,192 @@ footer {
   color: var(--muted); text-decoration: none; transition: color 0.3s;
 }
 .footer-links a:hover { color: var(--saffron); }
+
+/* ─── REVIEWS ─── */
+#reviews {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0D0400 0%, #1C0A00 50%, #0D0400 100%);
+  text-align: center;
+}
+#reviews::before {
+  content: 'REVIEWS';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: 'Cinzel', serif; font-size: 20vw; font-weight: 700;
+  color: rgba(232, 133, 10, 0.03); white-space: nowrap; pointer-events: none;
+  letter-spacing: 0.1em; z-index: 0;
+}
+.reviews-content { position: relative; z-index: 1; }
+
+/* Carousel layout: arrows on the sides, viewport in the middle */
+.reviews-carousel {
+  display: flex; align-items: center; gap: 1rem;
+  margin-top: 1rem;
+}
+.reviews-viewport {
+  flex: 1; overflow: hidden; position: relative;
+}
+.reviews-track {
+  display: flex; gap: 1.5rem;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* JS will set transform: translateX(...) to slide pages */
+}
+
+/* Each card takes (100% - 3 gaps) / 4 of the viewport */
+.review-card {
+  flex: 0 0 calc((100% - 4.5rem) / 4); /* 4 cards, 3 gaps of 1.5rem = 4.5rem total */
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(232, 133, 10, 0.2);
+  padding: 2rem 1.75rem;
+  display: flex; flex-direction: column;
+  text-align: left;
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  min-height: 280px;
+}
+.review-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--saffron), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.review-card:hover { border-color: var(--saffron); transform: translateY(-4px); }
+.review-card:hover::before { opacity: 1; }
+
+.review-stars {
+  color: var(--turmeric);
+  font-size: 1rem; letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; font-style: italic; line-height: 1.6;
+  color: var(--text-light);
+  flex: 1; /* push the author to the bottom */
+  margin-bottom: 1.5rem;
+}
+.review-author {
+  display: flex; align-items: center; gap: 0.85rem;
+  border-top: 1px solid rgba(232, 133, 10, 0.15);
+  padding-top: 1rem;
+}
+.review-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--saffron), var(--deep-red));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cinzel', serif; font-weight: 600;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+.review-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem; font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+.review-meta {
+  font-size: 0.7rem; color: var(--muted);
+  letter-spacing: 0.05em; margin-top: 0.15rem;
+}
+
+/* Arrow buttons */
+.review-arrow {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(232, 133, 10, 0.3);
+  color: var(--saffron);
+  font-size: 1.8rem; line-height: 1;
+  font-family: 'Cinzel', serif;
+  cursor: pointer; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+  padding-bottom: 4px; /* visual centering for the chevron glyph */
+}
+.review-arrow:hover {
+  background: var(--saffron);
+  color: var(--dark-brown);
+  border-color: var(--saffron);
+  transform: scale(1.05);
+}
+.review-arrow:disabled {
+  opacity: 0.3; cursor: not-allowed; transform: none;
+}
+.review-arrow:disabled:hover {
+  background: rgba(255,255,255,0.03);
+  color: var(--saffron);
+  border-color: rgba(232, 133, 10, 0.3);
+  transform: none;
+}
+
+/* Page dots */
+.review-dots {
+  display: flex; gap: 0.6rem; justify-content: center;
+  margin-top: 2.5rem;
+}
+.review-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(232, 133, 10, 0.25);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.review-dot:hover { background: rgba(232, 133, 10, 0.5); }
+.review-dot.active {
+  background: var(--saffron);
+  width: 28px; border-radius: 4px;
+}
+
+/* See more on Google CTA */
+.reviews-cta-wrap {
+  text-align: center; margin-top: 2.5rem;
+}
+.reviews-cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem; font-weight: 400;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--saffron);
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--saffron);
+  transition: all 0.3s;
+}
+.reviews-cta:hover {
+  background: var(--saffron);
+  color: var(--dark-brown);
+}
+.reviews-cta-arrow {
+  transition: transform 0.3s;
+}
+.reviews-cta:hover .reviews-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ─── REVIEWS RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  /* 3 cards visible on tablet */
+  .review-card {
+    flex: 0 0 calc((100% - 3rem) / 3);
+  }
+}
+@media (max-width: 768px) {
+  /* 2 cards visible on small tablet / large phone */
+  .review-card {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+    min-height: 260px;
+  }
+  .review-arrow {
+    width: 40px; height: 40px; font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  /* 1 card visible on phone */
+  .reviews-carousel { gap: 0.5rem; }
+  .review-card {
+    flex: 0 0 100%;
+    min-height: auto;
+  }
+  .review-arrow {
+    width: 36px; height: 36px; font-size: 1.3rem;
+  }
+  .review-text { font-size: 1rem; }
+}

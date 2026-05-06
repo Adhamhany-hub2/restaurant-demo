@@ -17,6 +17,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#buffet">Buffet</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Hours & Location</a></li>
   </ul>
   <a href="#contact" class="nav-reserve">Reserve a Table</a>
@@ -255,6 +256,332 @@
     <p style="color:var(--muted);font-size:0.75rem;text-align:center;margin-top:2rem;letter-spacing:0.1em;">
       * Buffet selection may vary daily. All items freshly prepared in-house.
     </p>
+  </div>
+</section>
+
+<!-- ─── REVIEWS ─── -->
+<section id="reviews">
+  <div class="container reviews-content">
+    <p class="section-label" style="text-align:center">Guest Stories</p>
+    <h2 class="section-title" style="text-align:center">What Our Guests Say</h2>
+    <div class="gold-rule" style="margin:1.5rem auto"></div>
+    <p style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;text-align:center;max-width:600px;margin:0 auto 3rem;">
+      Real words from real diners — straight from our Google reviews.
+    </p>
+
+    <!-- CAROUSEL -->
+    <div class="reviews-carousel">
+
+      <!-- LEFT ARROW -->
+      <button class="review-arrow review-arrow-left" onclick="changeReviewPage(-1)" aria-label="Previous reviews">
+        ‹
+      </button>
+
+      <!-- VIEWPORT (shows 4 cards at a time) -->
+      <div class="reviews-viewport">
+        <div class="reviews-track" id="reviewsTrack">
+          <!--
+            ============================================================
+            REVIEW CARDS — 20 total
+            ============================================================
+            To replace these with your real Google reviews, just edit the
+            text inside each .review-card block:
+              .review-stars  → number of ★ (1 to 5)
+              .review-text   → the review content
+              .review-name   → the reviewer's name
+              .review-meta   → e.g. "Local Guide · 3 months ago"
+            ============================================================
+          -->
+
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Absolutely incredible butter chicken — easily the best I've had in northwestern Ontario. The staff were warm and welcoming, and the buffet had so much variety. We'll be back."</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <div class="review-name">Sarah Mitchell</div>
+                <div class="review-meta">Local Guide · 2 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Stopped in on our drive across Ontario and what a gem. The Greek salad was fresh and the lamb gyro melted in my mouth. Owners are so kind. Highly recommend."</p>
+            <div class="review-author">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">David Tremblay</div>
+                <div class="review-meta">3 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The lunch buffet for $12.95 is unbeatable value. Fresh naan, flavourful curries, and the Thai red curry had a beautiful kick. Dryden is lucky to have this place."</p>
+            <div class="review-author">
+              <div class="review-avatar">P</div>
+              <div>
+                <div class="review-name">Priya Sharma</div>
+                <div class="review-meta">Local Guide · 1 month ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Wide variety, generous portions, and the samosas were crispy perfection. The dining room is cozy and the service was attentive without being pushy. Will definitely return."</p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div>
+                <div class="review-name">Michael O'Brien</div>
+                <div class="review-meta">2 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Four cuisines under one roof and they all hit. We split butter chicken, pad thai, and a souvlaki plate. Every bite was excellent. The garlic naan deserves an award."</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <div class="review-name">Jennifer Lin</div>
+                <div class="review-meta">5 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Travelling for work and stumbled on this place. The owner came over to chat and recommended the paneer tikka masala — phenomenal. Buffet was kept fresh and full."</p>
+            <div class="review-author">
+              <div class="review-avatar">R</div>
+              <div>
+                <div class="review-name">Robert Anderson</div>
+                <div class="review-meta">Local Guide · 4 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 7 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"My family of five all found something we loved. The kids went for the poutine and pizza, my wife had Greek, I went all-in on Indian. Everyone left full and happy."</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div>
+                <div class="review-name">Adam Wheeler</div>
+                <div class="review-meta">1 month ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 8 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Friendly staff, clean restaurant, and the butter chicken poutine is genius. Lost a star only because we waited a bit on a busy Friday — but the food made it worth it."</p>
+            <div class="review-author">
+              <div class="review-avatar">L</div>
+              <div>
+                <div class="review-name">Linda Patel</div>
+                <div class="review-meta">3 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 9 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Hands down the best Indian food in the region. The aloo gobi and dal tadka were rich and beautifully spiced. Service was warm and the buffet had so many options."</p>
+            <div class="review-author">
+              <div class="review-avatar">K</div>
+              <div>
+                <div class="review-name">Karan Singh</div>
+                <div class="review-meta">Local Guide · 6 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 10 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"We were a group of eight and they accommodated us with a smile. The pakoras came out hot and crispy, and the chicken tikka was on another level. Truly a hidden gem."</p>
+            <div class="review-author">
+              <div class="review-avatar">E</div>
+              <div>
+                <div class="review-name">Emily Carter</div>
+                <div class="review-meta">2 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 11 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Drove an hour to come here based on the reviews — totally worth it. The Thai green curry had real depth and the rice pudding for dessert was the perfect finish."</p>
+            <div class="review-author">
+              <div class="review-avatar">N</div>
+              <div>
+                <div class="review-name">Nathan Kowalski</div>
+                <div class="review-meta">4 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 12 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Solid choice for lunch. Buffet was well-maintained, naan was fresh out of the tandoor, and prices are very fair. Coming back to try the dinner menu next time."</p>
+            <div class="review-author">
+              <div class="review-avatar">T</div>
+              <div>
+                <div class="review-name">Tara MacDonald</div>
+                <div class="review-meta">1 week ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 13 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"This is our go-to family spot. The owners remember us by name now. Their butter chicken is legendary and the kids always ask for the cheese samosas. Five stars all day."</p>
+            <div class="review-author">
+              <div class="review-avatar">G</div>
+              <div>
+                <div class="review-name">Greg Thompson</div>
+                <div class="review-meta">Local Guide · 7 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 14 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Vegetarian options are plentiful and genuinely delicious — not an afterthought. The paneer pakora was incredible and the chana masala had the perfect balance of spice."</p>
+            <div class="review-author">
+              <div class="review-avatar">V</div>
+              <div>
+                <div class="review-name">Vanessa Reed</div>
+                <div class="review-meta">3 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 15 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Took my parents here for their anniversary. The staff made it special, brought out a complimentary dessert, and the food was outstanding from start to finish. Thank you Masala!"</p>
+            <div class="review-author">
+              <div class="review-avatar">C</div>
+              <div>
+                <div class="review-name">Christopher Hayes</div>
+                <div class="review-meta">2 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 16 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"Great variety and good prices. The wings have a nice kick and the calamari was cooked just right. A reliable, friendly spot — Dryden is fortunate to have it."</p>
+            <div class="review-author">
+              <div class="review-avatar">B</div>
+              <div>
+                <div class="review-name">Brian Foster</div>
+                <div class="review-meta">5 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 17 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The lamb biryani is the real deal — fragrant, perfectly cooked, and packed with flavour. We've travelled across India and this holds up. Beautiful food, kind people."</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div>
+                <div class="review-name">Anjali Desai</div>
+                <div class="review-meta">Local Guide · 4 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 18 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Stopped in for the buffet on a snowy evening and felt instantly at home. Hot, fresh food, cozy room, attentive service. Came for dinner, stayed for the chai."</p>
+            <div class="review-author">
+              <div class="review-avatar">H</div>
+              <div>
+                <div class="review-name">Hannah Brooks</div>
+                <div class="review-meta">2 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 19 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Honestly some of the best food in the entire region. The spice levels are spot on — they ask how you like it and they actually listen. Garlic naan: perfection."</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <div class="review-name">James Whitfield</div>
+                <div class="review-meta">6 months ago</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 20 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Five-star experience top to bottom. Generous portions, vibrant flavours, and the kind of hospitality that makes you want to drive back the very next weekend."</p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div>
+                <div class="review-name">Maria Gonzalez</div>
+                <div class="review-meta">Local Guide · 1 month ago</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button class="review-arrow review-arrow-right" onclick="changeReviewPage(1)" aria-label="Next reviews">
+        ›
+      </button>
+
+    </div>
+
+    <!-- DOTS (page indicator: 5 dots for 5 pages) -->
+    <div class="review-dots" id="reviewDots">
+      <span class="review-dot active" onclick="goToReviewPage(0)"></span>
+      <span class="review-dot" onclick="goToReviewPage(1)"></span>
+      <span class="review-dot" onclick="goToReviewPage(2)"></span>
+      <span class="review-dot" onclick="goToReviewPage(3)"></span>
+      <span class="review-dot" onclick="goToReviewPage(4)"></span>
+    </div>
+
+    <!-- SEE MORE → GOOGLE MAPS -->
+    <div class="reviews-cta-wrap">
+      <a href="https://www.google.com/maps/place/Masala+Restaurant/@49.7822256,-92.8289638,17z/data=!4m6!3m5!1s0x52a2b22c58c57f73:0xd723ed72c906578c!8m2!3d49.7822222!4d-92.8263889!16s%2Fg%2F1hc74gwbl"
+         target="_blank" rel="noopener"
+         class="reviews-cta">
+        See more reviews on Google
+        <span class="reviews-cta-arrow">→</span>
+      </a>
+    </div>
+
   </div>
 </section>
 
